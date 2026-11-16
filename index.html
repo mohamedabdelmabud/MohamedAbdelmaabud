@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Abdelmabud | Software Engineer & Freelancer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#00f2fe',
+                            purple: '#4facfe',
+                            dark: '#0a0f1d',
+                            card: '#111827',
+                            lightBg: '#f8fafc',
+                            lightCard: '#ffffff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Cairo', sans-serif; transition: background-color 0.3s, color 0.3s; }
+        .gradient-text {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .light .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+        }
+        .pulse-btn {
+            box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(0, 242, 254, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 242, 254, 0); }
+        }
+        /* Mobile Frames */
+        .phone-frame {
+            border: 10px solid #1f2937;
+            border-radius: 36px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gray-950 text-gray-100 transition-colors duration-300">
+
+    <!-- Navigation Header -->
+    <header class="fixed top-0 w-full z-50 glass-card transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-2xl font-black gradient-text">MEMO.TECK</span>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-sm">
+                <a href="#about" class="hover:text-cyan-400 transition" data-ar="عني" data-en="About">عني</a>
+                <a href="#skills" class="hover:text-cyan-400 transition" data-ar="المهارات" data-en="Skills">المهارات</a>
+                <a href="#projects" class="hover:text-cyan-400 transition" data-ar="المشاريع" data-en="Projects">المشاريع</a>
+                <a href="#academy" class="hover:text-cyan-400 transition" data-ar="الأكاديمية" data-en="Academy">الأكاديمية</a>
+                <a href="#contact" class="hover:text-cyan-400 transition" data-ar="تواصل معي" data-en="Contact">تواصل معي</a>
+            </nav>
+
+            <!-- Actions Controls -->
+            <div class="flex items-center gap-4">
+                <!-- Theme Toggle Button -->
+                <button id="themeToggle" class="p-2.5 rounded-full bg-gray-800 dark:bg-gray-800 text-yellow-400 dark:text-cyan-400 hover:scale-110 transition">
+                    <i class="fa-solid fa-moon dark:hidden"></i>
+                    <i class="fa-solid fa-sun hidden dark:inline"></i>
+                </button>
+
+                <!-- Language Toggle Button -->
+                <button id="langToggle" class="px-3 py-1.5 text-xs font-bold rounded-lg border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10 transition">
+                    EN
+                </button>
+
+                <!-- Direct Phone CTA Header -->
+                <a href="tel:01033809597" class="hidden sm:flex items-center gap-2 gradient-bg text-gray-950 px-5 py-2.5 rounded-full font-bold text-sm shadow-lg hover:opacity-90 transition">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>01033809597</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="pt-36 pb-20 px-4 min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6 text-center md:text-right">
+                <div class="inline-block px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 font-semibold text-sm">
+                    <span data-ar="🚀 مهندس برمجيات ومطور تطبيقات" data-en="🚀 Senior Software Engineer & Freelancer">🚀 مهندس برمجيات ومطور تطبيقات</span>
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    <span data-ar="مرحباً، أنا" data-en="Hi, I am">مرحباً، أنا</span> <br>
+                    <span class="gradient-text">محمد عبد المعبود</span>
+                </h1>
+                <p class="text-gray-400 text-lg leading-relaxed max-w-xl" data-ar="خبير في تطوير تطبيقات الموبايل بـ Flutter والمواقع الإلكترونية المتكاملة، ومؤسس أكاديمية MEMO.TECK لتعليم البرمجة في أسيوط." data-en="Expert Mobile App Developer (Flutter), Web Developer, and Founder of MEMO.TECK Coding Academy in Assiut.">
+                    خبير في تطوير تطبيقات الموبايل بـ Flutter والمواقع الإلكترونية المتكاملة، ومؤسس أكاديمية MEMO.TECK لتعليم البرمجة في أسيوط.
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-4 pt-4">
+                    <a href="tel:01033809597" class="pulse-btn gradient-bg text-gray-950 px-8 py-3.5 rounded-full font-bold text-lg flex items-center gap-3">
+                        <i class="fa-solid fa-phone"></i>
+                        <span data-ar="اتصل بي: 01033809597" data-en="Call Now: 01033809597">اتصل بي: 01033809597</span>
+                    </a>
+                    <a href="#projects" class="px-8 py-3.5 rounded-full border border-gray-700 hover:border-cyan-400 font-bold transition flex items-center gap-2">
+                        <span data-ar="استعرض الأعمال" data-en="View Projects">استعرض الأعمال</span>
+                        <i class="fa-solid fa-arrow-left text-cyan-400"></i>
+                    </a>
+                </div>
+
+                <!-- Stats Counter -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-800">
+                    <div>
+                        <h3 class="text-3xl font-black gradient-text">+5</h3>
+                        <p class="text-xs text-gray-400" data-ar="سنوات خبرة" data-en="Years Exp.">سنوات خبرة</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-black gradient-text">+20</h3>
+                        <p class="text-xs text-gray-400" data-ar="مشروع ناجح" data-en="Projects Completed">مشروع ناجح</p>
+                    </div>
+                    <div>
+                        <h3 class="text-3xl font-black gradient-text">+100</h3>
+                        <p class="text-xs text-gray-400" data-ar="طالب متدرب" data-en="Students Trained">طالب متدرب</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Image Container -->
+            <div class="flex justify-center relative">
+                <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden border-2 border-cyan-400/40 shadow-2xl shadow-cyan-500/20">
+                    <img src="634899247_871699522403705_408980383607791867_n.jpg" alt="Mohamed Abdelmabud" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 bg-gray-900/50">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-bold gradient-text" data-ar="المهارات والتقنيات البرمجية" data-en="Technical Skills">المهارات والتقنيات البرمجية</h2>
+                <p class="text-gray-400 text-sm" data-ar="التقنيات التي أستخدمها لبناء أنظمة وتطبيقات عالية الكفاءة" data-en="Technologies I use to build scalable web & mobile solutions">التقنيات التي أستخدمها لبناء أنظمة وتطبيقات عالية الكفاءة</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:border-cyan-400 transition">
+                    <i class="fa-brands fa-flutter text-4xl text-cyan-400"></i>
+                    <h3 class="font-bold">Flutter & Dart</h3>
+                    <p class="text-xs text-gray-400">Mobile Apps Development</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:border-cyan-400 transition">
+                    <i class="fa-brands fa-html5 text-4xl text-orange-500"></i>
+                    <h3 class="font-bold">HTML5 / CSS3 / JS</h3>
+                    <p class="text-xs text-gray-400">Web Development</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:border-cyan-400 transition">
+                    <i class="fa-brands fa-php text-4xl text-indigo-400"></i>
+                    <h3 class="font-bold">PHP & MySQL</h3>
+                    <p class="text-xs text-gray-400">Backend & Databases</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center space-y-3 hover:border-cyan-400 transition">
+                    <i class="fa-solid fa-code text-4xl text-blue-500"></i>
+                    <h3 class="font-bold">C# & C++</h3>
+                    <p class="text-xs text-gray-400">Desktop & Accounting Systems</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto space-y-12">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-bold gradient-text" data-ar="معرض الأعمال والمشاريع" data-en="Featured Projects">معرض الأعمال والمشاريع</h2>
+                <p class="text-gray-400 text-sm" data-ar="نماذج من أبرز المواقع والتطبيقات التي قمت بتطويرها" data-en="A selection of my professional applications and websites">نماذج من أبرز المواقع والتطبيقات التي قمت بتطويرها</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Cursati -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-cyan-400 transition group flex flex-col justify-between p-6 space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full font-bold">Web Platform</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Cursati Platform</h3>
+                        <p class="text-gray-400 text-sm">منصة تعليمية متكاملة لتقديم الدورة التدريبية والكورسات عبر الإنترنت بمستوى احترافي.</p>
+                    </div>
+                    <a href="https://www.cursati.com/" target="_blank" class="w-full py-2.5 rounded-xl border border-cyan-400/40 text-cyan-400 font-bold text-center block hover:bg-cyan-400 hover:text-gray-950 transition">
+                        زيارة الموقع <i class="fa-solid fa-external-link text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- US Academy -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-cyan-400 transition group flex flex-col justify-between p-6 space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full font-bold">E-Learning</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">US Academy</h3>
+                        <p class="text-gray-400 text-sm">موقع تعليمي متكامل لإدارة الكورسات، المساقات الدراسية والتعلم الأونلاين.</p>
+                    </div>
+                    <a href="https://us-academy.net" target="_blank" class="w-full py-2.5 rounded-xl border border-cyan-400/40 text-cyan-400 font-bold text-center block hover:bg-cyan-400 hover:text-gray-950 transition">
+                        زيارة الموقع <i class="fa-solid fa-external-link text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- Petsy -->
+                <div class="glass-card rounded-2xl overflow-hidden hover:border-cyan-400 transition group flex flex-col justify-between p-6 space-y-4">
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs px-3 py-1 bg-cyan-500/10 text-cyan-400 rounded-full font-bold">E-Commerce</span>
+                        </div>
+                        <h3 class="text-2xl font-bold">Petsy Store</h3>
+                        <p class="text-gray-400 text-sm">متجر إلكتروني حديث ومتجاوب لبيع مستلزمات الحيوانات الأليفة مع إدارة للمنتجات.</p>
+                    </div>
+                    <a href="https://petsysa.com" target="_blank" class="w-full py-2.5 rounded-xl border border-cyan-400/40 text-cyan-400 font-bold text-center block hover:bg-cyan-400 hover:text-gray-950 transition">
+                        زيارة المتجر <i class="fa-solid fa-external-link text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMO.TECK Academy Section -->
+    <section id="academy" class="py-20 px-4 bg-gray-900/40">
+        <div class="max-w-7xl mx-auto glass-card rounded-3xl p-8 md:p-12 border border-cyan-400/20">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-6">
+                    <span class="px-4 py-1.5 rounded-full bg-cyan-500/10 text-cyan-400 font-bold text-xs" data-ar="مؤسس ومحيط تعليمي" data-en="Founder & Education">مؤسس ومحيط تعليمي</span>
+                    <h2 class="text-3xl font-extrabold gradient-text">MEMO.TECK Academy</h2>
+                    <p class="text-gray-300 leading-relaxed" data-ar="أول أكاديمية في أسيوط لتعليم مجالات ولغات البرمجة للأطفال والكبار. نهدف لتأسيس جيل جديد قادر على الابتكار البرمجي وتطوير الحلول الرقمية." data-en="The first academy in Assiut dedicated to teaching programming languages and technologies to kids and adults.">
+                        أول أكاديمية في أسيوط لتعليم مجالات ولغات البرمجة للأطفال والكبار. نهدف لتأسيس جيل جديد قادر على الابتكار البرمجي وتطوير الحلول الرقمية.
+                    </p>
+                    <a href="https://www.facebook.com/profile.php?id=61560825591412" target="_blank" class="inline-flex items-center gap-3 bg-blue-600 text-white px-6 py-3 rounded-xl font-bold hover:bg-blue-700 transition">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span data-ar="صفحة الأكاديمية على فيسبوك" data-en="Visit Facebook Page">صفحة الأكاديمية على فيسبوك</span>
+                    </a>
+                </div>
+                <div class="p-6 bg-gray-950/80 rounded-2xl border border-gray-800 space-y-4 text-center">
+                    <i class="fa-solid fa-graduation-cap text-5xl text-cyan-400"></i>
+                    <h3 class="text-xl font-bold" data-ar="انضم إلى كورس البرمجة القادم" data-en="Join Our Next Course">انضم إلى كورس البرمجة القادم</h3>
+                    <p class="text-sm text-gray-400" data-ar="تواصل معنا للاستفسار عن مواعيد الدورات التدريبية المتاحة." data-en="Contact us to inquire about available training schedules.">تواصل معنا للاستفسار عن مواعيد الدورات التدريبية المتاحة.</p>
+                    <a href="https://wa.me/201033809597" target="_blank" class="gradient-bg text-gray-950 font-bold px-6 py-2.5 rounded-full inline-block text-sm">
+                        تواصل عبر الواتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Call & WhatsApp Buttons -->
+    <div class="fixed bottom-6 left-6 z-50 flex flex-col gap-3">
+        <a href="https://wa.me/201033809597?text=أهلاً%20مؤسس%20محمد،%20أود%20الاستفسار%20عن%20خدمات%20تطوير%20البرمجيات" target="_blank" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl shadow-xl hover:scale-110 transition">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:01033809597" class="w-14 h-14 gradient-bg rounded-full flex items-center justify-center text-gray-950 text-xl font-bold shadow-xl hover:scale-110 transition pulse-btn">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- Contact Section & Footer -->
+    <footer id="contact" class="py-12 border-t border-gray-800 text-center space-y-6">
+        <div class="max-w-7xl mx-auto px-4 space-y-4">
+            <h3 class="text-2xl font-bold gradient-text">Mohamed Abdelmabud</h3>
+            <p class="text-gray-400 text-sm">Assiut, Egypt | Phone: 01033809597 | 01025706865</p>
+            <div class="flex justify-center gap-6 text-xl">
+                <a href="https://mohamedabdelmabud.github.io/my-portfolio" target="_blank" class="hover:text-cyan-400"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:leestmemo@gmail.com" class="hover:text-cyan-400"><i class="fa-solid fa-envelope"></i></a>
+                <a href="tel:01033809597" class="hover:text-cyan-400"><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <p class="text-xs text-gray-600 pt-4">&copy; 2026 Mohamed Abdelmabud. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Controls -->
+    <script>
+        // Theme Switcher
+        const themeToggleBtn = document.getElementById('themeToggle');
+        themeToggleBtn.addEventListener('click', () => {
+            document.documentElement.classList.toggle('dark');
+            document.documentElement.classList.toggle('light');
+        });
+
+        // Language Switcher
+        const langToggleBtn = document.getElementById('langToggle');
+        let currentLang = 'ar';
+        langToggleBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            langToggleBtn.innerText = currentLang === 'ar' ? 'EN' : 'AR';
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+
+            document.querySelectorAll('[data-ar]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currentLang}`);
+            });
+        });
+    </script>
+</body>
+</html>
